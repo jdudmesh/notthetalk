@@ -1,0 +1,47 @@
+/*
+ * This file is part of the NOTtheTalk distribution (https://github.com/jdudmesh/notthetalk).
+ * Copyright (c) 2011-2021 John Dudmesh.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+package com.notthetalk
+
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
+class BannedWord {
+
+	String word
+
+	Pattern _pattern
+
+	def isBanned(text) {
+		if(!_pattern) {
+			_pattern = Pattern.compile(word,  Pattern.CASE_INSENSITIVE + Pattern.MULTILINE)
+		}
+
+		return _pattern.matcher(text).find()
+	}
+
+    static constraints = {
+		word blank: false
+    }
+
+	//static mapping = {
+	//	cache: 'read-only'
+	//}
+
+	static transients = ['_pattern']
+
+}

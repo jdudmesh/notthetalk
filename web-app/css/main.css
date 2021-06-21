@@ -1,0 +1,486 @@
+/*
+ * This file is part of the NOTtheTalk distribution (https://github.com/jdudmesh/notthetalk).
+ * Copyright (c) 2011-2021 John Dudmesh.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+html * {
+    margin: 0;
+    /*padding: 0; SELECT NOT DISPLAYED CORRECTLY IN FIREFOX */
+}
+
+body {
+    font: 12px verdana, arial, helvetica, sans-serif;
+    line-height: 1.5em;
+    width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+a {
+    color: #000036
+}
+
+tr {
+    line-height: 2em;
+}
+
+#gutlogo,
+#toplogo {
+    border: none;
+}
+
+#maincolumn {
+    margin-left: 8px;
+    margin-right: 8px;
+    min-height: 1024px;
+    height: 100%;
+    overflow: hidden;
+}
+
+#header {
+    margin-top: 120px;
+    margin-bottom: 16px;
+}
+
+#topbar {}
+
+#contentheader {
+    margin-left: 160px;
+    background-color: #f0f0f0;
+    color: black;
+    height: 48px;
+    margin-bottom: 32px;
+}
+
+#footer {
+    margin-top: 240px;
+    clear: both;
+}
+
+#email {
+    width: 240px;
+}
+
+.frontpagediscussion a {
+    text-decoration: none;
+}
+
+#contentheader-right {
+    background-color: black;
+    color: white;
+    width: 161px;
+    float: right;
+    padding: 4px;
+    height: 40px;
+}
+
+#contentheader-right a {
+    text-decoration: underline;
+    color: white;
+}
+
+.signupcol1 {
+    width: 200px;
+    vertical-align: top;
+}
+
+.instruction {
+    font-size: 9px;
+    font-style: italic;
+    margin-left: 4px;
+}
+
+.discussionlist {
+    margin-top: 4px;
+    margin-bottom: 12px;
+    /*line-height: 1.5em;*/
+}
+
+.folderList a {
+    color: #000036
+}
+
+#folders {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 142px;
+}
+
+#folders div {
+    /*line-height: 1.5em;*/
+}
+
+#discussions {
+    margin-left: 168px;
+}
+
+#discussionsHeading {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#headerText {
+    clear: both;
+}
+
+.headerTextLink {
+    color: #000036;
+}
+
+.toptext {
+    float: left;
+    padding: 8px;
+}
+
+.noleftcolumn {
+    margin-left: 164px;
+    width: 416px;
+    padding-left: 8px;
+    padding-right: 8px;
+    float: left;
+}
+
+.centrecolumn {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 420px;
+    float: left;
+    margin-bottom: 64px;
+}
+
+.centrecolumn-nofolders {
+    margin-left: 164px;
+    width: 428px;
+    float: left;
+}
+
+.bold {
+    font-weight: bold
+}
+
+.margin12 {
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+}
+
+.sides12 {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.margin2 {
+    margin-bottom: 2px;
+}
+
+.bordered {
+    border-top: solid #c0c0c0 1px;
+    padding-top: 6px;
+}
+
+.headertext {
+    padding-left: 4px;
+    color: #000036
+}
+
+#rightcontent {
+    float: right;
+    width: 161px;
+    padding-left: 8px;
+}
+
+.nobullets {
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.dropdownitem {
+    font-size: 12px;
+    color: #000036;
+}
+
+.dropdownbreak {
+    width: 100%;
+    border-top: 1px solid #7EABCD;
+    margin-bottom: 6px;
+}
+
+.postheader {
+    width: 100%;
+    border-top: solid #c0c0c0 1px;
+    padding-top: 4px;
+    vertical-align: top;
+}
+
+.postbody {
+    width: 100%;
+    clear: both;
+}
+
+.postright {
+    float: right;
+    text-align: right;
+    width: 33%;
+    margin-bottom: 12px;
+}
+
+.postouter {
+    width: 100%;
+    float: left;
+}
+
+.posttitle {
+    float: left;
+    height: 26px;
+    width: 390px;
+    margin-bottom: 12px;
+}
+
+.postmenu {
+    float: right;
+}
+
+.post-quoted {
+    margin-left: 36px;
+    margin-right: 36px;
+    font-family: Courier New, Courier, Monaco;
+    font-size: 0.9em;
+}
+
+.post-italic {
+    font-style: italic;
+}
+
+.post-bold {
+    font-weight: bold;
+}
+
+.post-centre {
+    text-align: center;
+}
+
+.post-underline {
+    text-decoration: underline;
+}
+
+.post-strikethrough {
+    text-decoration: line-through;
+}
+
+.post-noindentbullet {
+    padding-left: 1.5em;
+}
+
+.post-indent1 {
+    padding-left: 2em;
+}
+
+.post-indent2 {
+    padding-left: 4em;
+}
+
+.threadheading {
+    border-top: solid #c0c0c0 1px;
+    background-color: #f0f0f0;
+    padding: 4px;
+}
+
+.top24 {
+    margin-top: 36px;
+}
+
+.posttextarea {
+    display: block;
+    vertical-align: top;
+    width: 428px;
+    height: 180px;
+}
+
+.post-deleted,
+.post-ignored {
+    color: #c0c0c0
+}
+
+.post-status-message {
+    color: #c0c0c0;
+    font-weight: bold;
+    clear: both;
+}
+
+.postright ul {
+    list-style: none;
+}
+
+.threadlocked {
+    font-style: italic;
+    color: red;
+}
+
+.rederror {
+    font-weight: bold;
+    color: red;
+}
+
+.biotext {
+    display: block;
+    vertical-align: top;
+    width: 400px;
+    height: 180px;
+}
+
+.menu {
+    font-size: 8pt;
+    border: solid #000036 1px;
+}
+
+.menu tr td {
+    color: #000036;
+    padding: 2px;
+}
+
+.threadnav {
+    /*line-height: 1.5em;*/
+    width: 100%;
+    clear: both;
+    height: 26px;
+}
+
+.threadnav a {
+    margin-right: 4px;
+}
+
+.threadouterheader {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.post-moderated-deletedbyuser {
+    background-color: #c0c0c0;
+    padding: 4px;
+    clear: both;
+}
+
+.post-moderated-watch {
+    background-color: #c0FFc0;
+    padding: 4px;
+    clear: both;
+}
+
+.post-moderated-suspended {
+    background-color: #FF99CC;
+    padding: 4px;
+    clear: both;
+}
+
+.post-moderated-deleted {
+    background-color: #ffb7cb;
+    padding: 4px;
+    clear: both;
+}
+
+.post-moderated {
+    background-color: #fada77;
+    padding: 4px;
+    height: 100%;
+    clear: both;
+}
+
+.post-moderated div {
+    background-color: #fada77;
+    padding: 4px;
+}
+
+.moderation-report {}
+
+.moderation-actions {
+    float: right;
+    text-align: right;
+    margin-top: 4px;
+}
+
+.moderation-actions ul {
+    list-style: none;
+}
+
+.tool-icon {
+    background-image: url('/notthetalk.com/images/plus.gif')
+}
+
+.report-icon {
+    background-image: url('/notthetalk.com/images/warning.png')
+}
+
+.edit-icon {
+    background-image: url('/notthetalk.com/images/document.png')
+}
+
+.delete-icon {
+    background-image: url('/notthetalk.com/images/delete-2.png')
+}
+
+.facebook-icon {
+    background-image: url('/notthetalk.com/images/facebook.png')
+}
+
+.pagelist {
+    clear: both;
+    margin-bottom: 4px;
+}
+
+.pagemenu {
+    padding: 4px;
+}
+
+.currentStep {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.step {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.nextLink {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#newpostsindicator {
+    color: #000000;
+    background-color: #F0F0F0;
+    clear: both;
+    border: solid #C0C0C0 1px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+#donate {
+    margin-top: 24px;
+    width: 160px;
+}
+
+#donate_help {
+    float: right;
+}
+
+#donate_help a {
+    font-size: 0.75em;
+}
